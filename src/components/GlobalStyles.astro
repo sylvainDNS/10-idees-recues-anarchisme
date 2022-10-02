@@ -1,0 +1,58 @@
+---
+import '../assets/novela/stylesheet.css'
+---
+
+<style is:global lang="sass">
+  :root
+    --grey-900: hsl(210 8% 5%)
+    --grey-700: hsl(210 8% 9%)
+    --grey-500: hsl(210 6% 19%)
+    --grey-300: hsl(210 4% 38%)
+    --grey-100: hsl(210 3% 75%)
+    --white: hsl(240 7% 96%)
+
+    --text: var(--grey-900)
+    --background: var(--white)
+
+    --16px: calc(16rem / 16)
+    --18px: calc(18rem / 16)
+    --24px: calc(24rem / 16)
+    --28px: calc(28rem / 16)
+    --36px: calc(36rem / 16)
+    --32px: calc(32rem / 16)
+    --40px: calc(40rem / 16)
+
+    color: var(--text)
+    background-color: var(--background)
+    font-family: Novela, 'Times New Roman', serif
+    font-weight: 200
+
+  :root, body
+    height: 100%
+
+  *, *::before, *::after
+    box-sizing: border-box
+
+  h2
+    line-height: var(--40px)
+    font-size: var(--36px)
+    font-weight: 600
+
+  p
+    line-height: var(--28px)
+    font-size: var(--18px)
+    font-weight: 200
+
+  main
+    height: 100%
+
+  strong
+    font-weight: 600
+
+  em
+    font-style: italic
+
+  sup
+    vertical-align: super
+    font-size: smaller
+</style>
