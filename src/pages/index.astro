@@ -1,42 +1,111 @@
 ---
 import Layout from '../layouts/Layout.astro'
+
+interface Frontmatter {
+  title: string
+}
+
+const ideas = await Astro.glob<Frontmatter>('../ideas/*.md')
 ---
 
 <Layout title="10 idées reçues sur l'anarchisme">
   <main>
-    <h1>« L'Anarchie ça existe encore ?!! »</h1>
-    <h2>Idée reçue n°<strong>2</strong></h2>
-    <p>
-      Oui !!! Les mouvements anarchistes n'attirent pas les faveurs des
-      médias... tout simplement parce qu'ils remettent le pouvoir médiatique en
-      question !
-    </p>
-    <p>
-      Et puis, par définition, aucun chefaillon charismatique n'est là pour
-      prêcher la bonne parole anarchiste, ce qui laisse peu de place dans une
-      société de l'information organisée autour des émissions de divertissement
-      de la télé-poubelle...
-    </p>
-    <p>
-      La pensée anarchiste est pourtant particulièrement vivace aujourd'hui,
-      dans notre monde injuste où de plus en plus de gens prennent conscience
-      qu'il est grand temps d'inventer une nouvelle société !
-    </p>
-    <aside>
-      <p>
-        Quelques-unes parmi les (nombreuses) expériences d'autogestion actuelles
-        :
-      </p>
-
-      <ul>
-        <li>Les jardins partagés «Ecobox» (à Paris depuis 2001)</li>
-        <li>
-          Le Lycée Autogéré de Paris, qui fête cette année (2012) ses trente ans
-        </li>
-        <li>Les coopératives de Longo Maï etc...</li>
-      </ul>
-    </aside>
+    {
+      ideas.map(({ frontmatter, Content }, index) => (
+        <article>
+          <hgroup>
+            <p>
+              Idée reçue n°<strong>{index + 1}</strong>&nbsp;:
+            </p>
+            {/* eslint-disable-next-line astro/no-set-html-directive */}
+            <h2 set:html={`«&nbsp;${frontmatter.title}&nbsp;»`} />
+          </hgroup>
+          <Content />
+        </article>
+      ))
+    }
   </main>
 </Layout>
 
-<style></style>
+<style lang="sass">
+  main
+    display: flex
+    flex-direction: column
+    align-items: center
+    overflow-y: auto
+    scroll-snap-type: y mandatory
+    scroll-padding: 0 0 25%
+    -webkit-overflow-scrolling: touch
+
+  article
+    padding: 32px
+    max-width: 900px
+    width: 100%
+    min-height: 100%
+    flex-shrink: 0
+    scroll-snap-align: start
+    scroll-snap-stop: always
+
+    & > :global(p)
+      @media (min-width: 900px)
+        max-width: 80%
+
+      &:last-of-type
+        margin-bottom: 32px
+
+    :global(aside)
+      border: 16px solid
+      border-image: url(../assets/frame_2.svg)
+      border-image-slice: 16
+
+      line-height: var(--24px)
+      font-size: var(--16px)
+      font-weight: 200
+
+      @media (min-width: 900px)
+        width: 50%
+        margin-left: auto
+
+      :global(ul)
+        padding-left: 24px
+      :global(li)
+        list-style: disc
+      :global(p)
+        font: inherit
+      :global(li)
+        font: inherit
+
+  hgroup
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+    p
+      display: inline-block
+      width: max-content
+      padding: 0 6px
+
+      border: 4px solid
+      border-image: url(../assets/frame_1.svg)
+      border-image-slice: 4
+
+      line-height: var(--32px)
+      font-size: var(--24px)
+      font-weight: 200
+
+    h2
+      position: relative
+      margin-bottom: 32px
+
+      &:after
+        position: absolute
+        bottom: -8px
+        left: 0
+        content: ''
+        width: 100%
+        height: 4px
+        background: url(../assets/line.svg) no-repeat top left
+
+      :global(strong)
+        font-weight: 900
+</style>
