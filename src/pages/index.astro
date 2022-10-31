@@ -13,14 +13,16 @@ const ideas = await Astro.glob<Frontmatter>('../ideas/*.md')
     {
       ideas.map(({ frontmatter, Content }, index) => (
         <article>
-          <hgroup>
-            <p>
-              Idée reçue n°<strong>{index + 1}</strong>&nbsp;:
-            </p>
-            {/* eslint-disable-next-line astro/no-set-html-directive */}
-            <h2 set:html={`«&nbsp;${frontmatter.title}&nbsp;»`} />
-          </hgroup>
-          <Content />
+          <div>
+            <hgroup>
+              <p>
+                Idée reçue n°<strong>{index + 1}</strong>&nbsp;:
+              </p>
+              {/* eslint-disable-next-line astro/no-set-html-directive */}
+              <h2 set:html={`«&nbsp;${frontmatter.title}&nbsp;»`} />
+            </hgroup>
+            <Content />
+          </div>
         </article>
       ))
     }
@@ -38,13 +40,21 @@ const ideas = await Astro.glob<Frontmatter>('../ideas/*.md')
     -webkit-overflow-scrolling: touch
 
   article
-    padding: 32px
-    max-width: 900px
     width: 100%
     min-height: 100%
     flex-shrink: 0
+    display: flex
+    justify-content: center
     scroll-snap-align: start
     scroll-snap-stop: always
+
+    color: var(--text)
+    background-color: var(--background)
+
+    & > div
+      padding: 32px
+      max-width: 900px
+      margin: auto
 
     & > :global(p)
       @media (min-width: 900px)
@@ -54,9 +64,9 @@ const ideas = await Astro.glob<Frontmatter>('../ideas/*.md')
         margin-bottom: 32px
 
     :global(aside)
+      margin-top: 32px
       border: 16px solid
-      border-image: url(../assets/frame_2.svg)
-      border-image-slice: 16
+      border-image: url(../assets/frame_2_odd.svg) 16
 
       line-height: var(--24px)
       font-size: var(--16px)
@@ -86,8 +96,7 @@ const ideas = await Astro.glob<Frontmatter>('../ideas/*.md')
       padding: 0 6px
 
       border: 4px solid
-      border-image: url(../assets/frame_1.svg)
-      border-image-slice: 4
+      border-image: url(../assets/frame_1_odd.svg) 4
 
       line-height: var(--32px)
       font-size: var(--24px)
@@ -104,8 +113,23 @@ const ideas = await Astro.glob<Frontmatter>('../ideas/*.md')
         content: ''
         width: 100%
         height: 4px
-        background: url(../assets/line.svg) no-repeat top left
+        background: url(../assets/line_odd.svg) no-repeat top left
 
       :global(strong)
         font-weight: 900
+
+  article:nth-child(even)
+    --text: var(--white)
+    --background: var(--grey-900)
+
+    hgroup
+      p
+        border-image-source: url(../assets/frame_1_even.svg)
+      h2:after
+        background-image: url(../assets/line_even.svg)
+
+    :global(a)
+      color: var(--grey-100)
+    :global(aside)
+      border-image-source: url(../assets/frame_2_even.svg)
 </style>
