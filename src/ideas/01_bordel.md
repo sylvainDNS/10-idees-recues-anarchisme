@@ -1,5 +1,6 @@
 ---
 title: L'anarchie c'est le bordel&nbsp;!
+id: anarchie-bordel
 ---
 
 **Le bordel, vraiment&nbsp;?...** L'anarchie propose une organisation égalitaire basée sur la fédération et l'association. L'anarchie, c'est **l'ordre, sans le pouvoir**.
