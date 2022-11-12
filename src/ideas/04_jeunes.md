@@ -1,5 +1,6 @@
 ---
 title: Ouais... C'est un truc de jeunes ça&nbsp;!
+id: truc-de-jeune
 ---
 
 **Ce poncif** vise à discréditer le mouvement en insinuant que l'anarchie est une utopie romantique propre à séduire les cœurs tendres des adolescents.

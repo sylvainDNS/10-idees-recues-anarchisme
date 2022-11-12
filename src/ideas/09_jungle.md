@@ -1,5 +1,6 @@
 ---
 title: L'anarchie c'est la loi de la jungle
+id: anarchie-loi-jungle
 ---
 
 **Oui...** une jungle où personne n'exploite son semblable pour tirer profit de son travail&nbsp;;  

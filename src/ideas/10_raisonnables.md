@@ -1,5 +1,6 @@
 ---
 title: Oui, mais les gens ne sont pas assez raisonnables pour l'anarchie
+id: pas-assez-raisonnables
 ---
 
 Ce préjugé ressemble curieusement à l'argument des esclavagistes au 19<sup>ème</sup> siècle&nbsp;: «&nbsp;_Oui, mais si on libère les esclaves, ils ne sauront jamais se débrouiller sans leurs maitres&nbsp;!&nbsp;_»

@@ -1,5 +1,6 @@
 ---
 title: Les anarchistes ne croient en rien
+id: anarchistes-croient-rien
 ---
 
 Les anarchistes ne croient pas, ils pensent.

@@ -1,5 +1,6 @@
 ---
 title: Les anarchistes c'est rien que des individualistes
+id: anarchistes-individualistes
 ---
 
 Nous ne sommes pas d'accord avec la maxime qui prétend que «&nbsp;la liberté des uns s'arrête là où commence celle des autres&nbsp;». Au contraire, nous pensons que «&nbsp;**_la liberté des uns ne peut s'étendre qu'avec celle des autres_**&nbsp;».

@@ -1,5 +1,6 @@
 ---
 title: C'est bien beau tout ça... mais <strong>en vrai</strong> ça ne peut pas marcher
+id: bien-beau-par-marcher
 ---
 
 Reléguer l'anarchisme au rang de rêve naïf est très facile... mais mensonger : la réalité regorge d'expériences libertaires réussies, historiques et contemporaines.
