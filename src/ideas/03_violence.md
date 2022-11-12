@@ -1,5 +1,6 @@
 ---
 title: L'anarchie c'est la violence
+id: anarchie-violence
 ---
 
 Si nous refusons toute domination, c'est justement parce que celles-ci s'accompagnent invariablement de violences.

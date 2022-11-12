@@ -1,5 +1,6 @@
 ---
 title: On ne peut pas faire fonctionner une société sans règles
+id: societe-sans-regles
 ---
 
 Qui a dit que l'absence de pouvoir signifiait l'absence de règles&nbsp;?

@@ -1,5 +1,6 @@
 ---
 title: L'anarchie... ça existe encore&nbsp;?!!
+id: anarchie-existe-encore
 ---
 
 **Oui&nbsp;!!!** Les mouvements anarchistes n'attirent pas les faveurs des médias... sauf quand il s'agit de les caricaturer&nbsp;!
