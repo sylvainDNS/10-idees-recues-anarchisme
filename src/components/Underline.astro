@@ -1,0 +1,19 @@
+---
+import Line from './shapes/Line.astro'
+---
+
+<div class="line">
+  <slot />
+  <Line />
+</div>
+
+<style lang="sass">
+  .line
+    position: relative
+
+    > :global(svg)
+      position: absolute
+      bottom: 24px
+      left: 0
+      width: 165px
+</style>
