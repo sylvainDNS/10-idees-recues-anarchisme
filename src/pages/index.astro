@@ -35,6 +35,8 @@ const ideas = await Astro.glob<Frontmatter>('../ideas/*.mdx')
 </Layout>
 
 <style lang="sass">
+  @use '../utils/breakpoints'
+
   main
     display: flex
     flex-direction: column
@@ -57,17 +59,17 @@ const ideas = await Astro.glob<Frontmatter>('../ideas/*.mdx')
     & > div
       padding: 32px
       max-width: 900px
-      margin: auto
+      margin: 0 auto
 
-      @media (min-width: 900px)
-        margin-block: 0
+      @media (breakpoints.$mobileAndUp)
+        margin-block: auto
 
-    & > :global(p)
-      @media (min-width: 900px)
-        max-width: 80%
+      & > :global(p)
+        @media (breakpoints.$tabletAndUp)
+          max-width: 80%
 
-      &:last-of-type
-        margin-bottom: 32px
+        &:last-of-type
+          margin-bottom: 32px
 
   hgroup
     display: flex
