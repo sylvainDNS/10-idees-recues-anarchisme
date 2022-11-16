@@ -1,0 +1,30 @@
+---
+import Frame from './Frame.astro'
+---
+
+<Frame variant="secondary" as="aside">
+  <slot />
+</Frame>
+
+<style lang="sass">
+  aside
+    position: relative
+    margin-top: 32px
+    line-height: var(--24px)
+    font-size: var(--16px)
+    font-weight: 200
+    padding: 16px
+
+    @media (min-width: 900px)
+      width: 50%
+      margin-left: auto
+
+    :global(ul)
+      padding-left: 24px
+    :global(li)
+      list-style: disc
+    :global(p)
+      font: inherit
+    :global(li)
+      font: inherit
+</style>
