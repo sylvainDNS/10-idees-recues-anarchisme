@@ -21,9 +21,9 @@ const ideas = await Astro.glob<Frontmatter>('../ideas/*.mdx')
               <Frame as="p" variant="primary">
                 Idée reçue n°<strong>{index + 1}</strong>&nbsp;:
               </Frame>
-              <Underline>
+              <Underline as="h2">
                 {/* eslint-disable-next-line astro/no-set-html-directive */}
-                <h2 set:html={`«&nbsp;${frontmatter.title}&nbsp;»`} />
+                <Fragment set:html={`«&nbsp;${frontmatter.title}&nbsp;»`} />
               </Underline>
             </hgroup>
             <Content />

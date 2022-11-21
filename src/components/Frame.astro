@@ -1,4 +1,5 @@
 ---
+import type { HTMLTag } from 'astro/types'
 import Frame01 from './shapes/Frame_01.astro'
 import Frame02 from './shapes/Frame_02.astro'
 
@@ -6,7 +7,7 @@ type Variant = 'primary' | 'secondary'
 
 export interface Props {
   variant: Variant
-  as: string
+  as: HTMLTag
   class?: string
 }
 const { variant, as: Element, class: className } = Astro.props
@@ -19,11 +20,9 @@ const frames = {
 const FrameElement = frames[variant]
 ---
 
-<Element class:list={['.frame', className]}>
-  <span>
-    <FrameElement />
-  </span>
+<Element class:list={['frame', className]}>
   <slot />
+  <FrameElement />
 </Element>
 
 <style lang="sass">
@@ -31,7 +30,7 @@ const FrameElement = frames[variant]
     position: relative
     width: fit-content
 
-  span :global(svg)
+  svg
     position: absolute
     top: 0
     bottom: 0

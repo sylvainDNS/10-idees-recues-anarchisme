@@ -1,19 +1,27 @@
 ---
+import type { HTMLTag } from 'astro/types'
 import Line from './shapes/Line.astro'
+
+export interface Props {
+  as: HTMLTag
+  class?: string
+}
+
+const { as: Element, class: className } = Astro.props
 ---
 
-<div class="line">
+<Element class:list={['line', className]}>
   <slot />
   <Line />
-</div>
+</Element>
 
 <style lang="sass">
   .line
     position: relative
 
-    > :global(svg)
-      position: absolute
-      bottom: 24px
-      left: 0
-      width: 165px
+  svg
+    position: absolute
+    bottom: -8px
+    left: 0
+    width: 165px
 </style>
