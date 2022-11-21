@@ -1,8 +1,17 @@
+---
+export interface Props {
+  class?: string
+}
+
+const { class: className } = Astro.props
+---
+
 <svg
   viewBox="0 0 165 4"
   fill="none"
   preserveAspectRatio="none"
   aria-hidden="true"
+  class={className}
 >
   <use href="#line"></use>
 </svg>
