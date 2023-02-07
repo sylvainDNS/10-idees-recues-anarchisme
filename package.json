@@ -12,7 +12,7 @@
     "astro": "^2.0.4"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.49.0",
     "astro-compress": "^1.1.29",
     "autoprefixer": "^10.4.13",
