@@ -17,7 +17,7 @@
     "astro-compress": "^1.1.33",
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
-    "cssnano-preset-advanced": "^5.3.9",
+    "cssnano-preset-advanced": "^5.3.10",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-astro": "^0.23.0",
