@@ -8,19 +8,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.17.2",
-    "astro": "^2.0.18"
+    "@astrojs/mdx": "^0.18.0",
+    "astro": "^2.1.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.53.0",
-    "@typescript-eslint/parser": "^5.51.0",
-    "astro-compress": "^1.1.33",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "astro-compress": "^1.1.35",
     "autoprefixer": "^10.4.13",
-    "cssnano": "^5.1.14",
+    "cssnano": "^5.1.15",
     "cssnano-preset-advanced": "^5.3.10",
     "eslint": "^8.35.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-astro": "^0.23.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-astro": "^0.24.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^4.2.1",
     "postcss-preset-env": "^8.0.1",
