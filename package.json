@@ -25,6 +25,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "postcss-preset-env": "^8.0.1",
     "prettier": "^2.8.4",
-    "sass": "^1.58.3"
+    "sass": "^1.60.0"
   }
 }
