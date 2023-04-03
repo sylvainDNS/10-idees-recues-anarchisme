@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.18.0",
-    "astro": "^2.1.2"
+    "astro": "^2.1.9"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.55.0",
