@@ -16,7 +16,7 @@
     "@typescript-eslint/parser": "^5.55.0",
     "astro-compress": "^1.1.35",
     "autoprefixer": "^10.4.14",
-    "cssnano": "^5.1.15",
+    "cssnano": "^6.0.0",
     "cssnano-preset-advanced": "^5.3.10",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
